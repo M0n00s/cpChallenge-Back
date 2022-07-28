@@ -9,8 +9,9 @@ app.use(express.json())
 app.use('/', require('./Routes/index'))
 
 // listen del puerto peticiones
-app.listen(4000, () => {
-  console.log('server up port:4000')
+const PORT = process.env.PORT || 4000 
+app.listen( PORT , () => {
+  console.log(`server up port:${ PORT}`)
 })
 
 module.exports = app
