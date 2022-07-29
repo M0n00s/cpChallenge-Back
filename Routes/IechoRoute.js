@@ -9,7 +9,6 @@ const router = Router()
 
 router.get('/', (req, res) => {
   const { text } = req.query
-
   if (text) {
     const iText = invertText(text)
     return res.status(200).json(iText)
